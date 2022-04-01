@@ -1,5 +1,6 @@
 package com.apps.newsapp.news
 
+import android.util.Log
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -28,6 +29,7 @@ class ListViewModel @Inject constructor(private val newsRepository: NewsReposito
             try {
                 
             val newsFromAPI=newsRepository.getNews()
+                Log.d("news from api ",newsFromAPI.toString())
                 listlivedata.postValue(Resource.success(newsFromAPI.articles!!))
             }
             catch (e:Exception)

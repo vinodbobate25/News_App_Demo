@@ -38,7 +38,8 @@ data class ArticlesItem(
 	val url: String? = null,
 
 	@field:SerializedName("content")
-	val content: String? = null
+	val content: String? = null,
+
 )
 
 data class Source(
