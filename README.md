@@ -1,5 +1,5 @@
 # News App
-<img src="readme/player.gif" alt="player git" width="980" />
+<img src="screenshot.png" alt="player git" width="980" />
 
 A demo project to share my learnings
 
