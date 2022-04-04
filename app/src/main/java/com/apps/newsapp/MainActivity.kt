@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.View
 import android.widget.Toast
-import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -16,13 +15,12 @@ import com.apps.newsapp.news.ListViewModel
 import com.apps.newsapp.news.OnClickListener
 import com.apps.newsapp.utils.Status
 import com.bumptech.glide.Glide
-import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.listitem.view.*
+import org.koin.android.viewmodel.ext.android.viewModel
 
-@AndroidEntryPoint
 class MainActivity : AppCompatActivity(),OnClickListener {
-    private val  listViewModel: ListViewModel by viewModels()
+    private val  listViewModel: ListViewModel by viewModel()
     private lateinit var adapter:APINewsApdater
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
